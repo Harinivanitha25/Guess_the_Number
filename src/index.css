@@ -21,7 +21,14 @@
   color:#030D11;
   justify-items: center;
   
+        animation: slide-in 0.3s forwards;
+    }
+     @keyframes slide-in {
+        from { transform: translateX(20%); }
+        to { transform: translateX(0); }
 }
+
+
 .title{
     text-align: center;
     font-size: 100px;
@@ -97,7 +104,12 @@ input::-webkit-inner-spin-button {
   border-radius: 20px;
  background-color:#35864B ;
  border:2px solid #030D11;
+  transition: transform 0.4s ease-in-out; 
 }
+.start:hover {
+  transform: scale(1.1); 
+}
+
 .display
 {
    background-color: #1d526764;
@@ -140,6 +152,10 @@ input::-webkit-inner-spin-button {
   border-radius: 20px;
   background-color:#35864B ;
   border:2px solid #030D11;
+   transition: transform 0.4s ease-in-out; 
+}
+.check:hover {
+  transform: scale(1.1); 
 }
 .attempt{
   font-size: 50px;
@@ -159,6 +175,10 @@ input::-webkit-inner-spin-button {
   color: #030D11;
  text-decoration: none;
   display: flex;
+   transition: transform 0.4s ease-in-out; 
+}
+.try:hover {
+  transform: scale(1.1); 
 }
 .finish{
   background-color: #1d526764;
@@ -202,8 +222,7 @@ input::-webkit-inner-spin-button {
   border: 1px solid #030D11;
   border-radius: 10px;
   padding: 15px;
- 
-  position: relative;
+ position: relative;
  left:240px;
  top:490px;
 }
@@ -225,3 +244,61 @@ input::-webkit-inner-spin-button {
   text-align: center;
   font-size: 50px;
 }
+@keyframes fadeScale {
+  0% {
+    opacity: 0.5;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.body {
+  animation: fadeScale 0.6s ease-in-out both;
+}
+.start:hover, .check:hover, .try:hover {
+  transform: scale(1.1) rotate(1deg);
+}
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.finish, .instruction-box {
+  animation: bounceIn 0.6s ease-out;
+}
+@keyframes sparkle {
+  
+  50% {
+    text-shadow: 0 0 10px #ffffff, 0 0 30px #ffffff;
+  }
+}
+.success {
+  animation: sparkle 2s infinite;
+  color: #030D11;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+.instruction-toggle {
+  animation: float 3s ease-in-out infinite;
+}
+

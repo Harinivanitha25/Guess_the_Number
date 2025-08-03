@@ -10,7 +10,7 @@ function Finish() {
     <p className='title'>Guess the Number</p>
      <div className='line'></div>
      {status === 'success' ? (
-        <p className='finish'>Great! You guessed it right.<br></br> The number is {num}.</p>
+        <p className='finish success'>Great! You guessed it right.<br></br> The number is {num}.</p>
       ) : (
         <p className='finish' >There is no attempts available. <br></br>The correct number is {num}.</p>
       )}
