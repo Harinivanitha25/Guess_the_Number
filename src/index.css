@@ -98,7 +98,6 @@ input::-webkit-inner-spin-button {
   border-radius: 20px;
  background-color:#35864B ;
  border:2px solid #030D11;
-  transition: transform 0.4s ease-in-out; 
 }
 
 .display
@@ -142,8 +141,7 @@ input::-webkit-inner-spin-button {
   font-family: 'Freestyle Script', cursive;
   border-radius: 20px;
   background-color:#35864B ;
-  border:2px solid #030D11;
-   transition: transform 0.4s ease-in-out; 
+  border:2px solid #030D11; 
 }
 
 .attempt{
@@ -164,7 +162,7 @@ input::-webkit-inner-spin-button {
   color: #030D11;
  text-decoration: none;
   display: flex;
-   transition: transform 0.4s ease-in-out; 
+   
 }
 
 .finish{
