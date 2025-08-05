@@ -230,3 +230,61 @@ input::-webkit-inner-spin-button {
   text-align: center;
   font-size: 50px;
 }
+@keyframes fadeScale {
+  0% {
+    opacity: 0.5;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.body {
+  animation: fadeScale 0.6s ease-in-out both;
+}
+.start:hover, .check:hover, .try:hover {
+  transform: scale(1.1) rotate(1deg);
+}
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.finish, .instruction-box {
+  animation: bounceIn 0.6s ease-out;
+}
+@keyframes sparkle {
+  
+  50% {
+    text-shadow: 0 0 10px #ffffff, 0 0 30px #ffffff;
+  }
+}
+.success {
+  animation: sparkle 2s infinite;
+  color: #030D11;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+.instruction-toggle {
+  animation: float 3s ease-in-out infinite;
+}
+
