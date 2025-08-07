@@ -1,23 +1,22 @@
 import React from 'react'
 import Range from './Range'
 import App from './App'
-import {BrowserRouter,Routes,Route, Link} from 'react-router-dom'
 import Finish from './Finish'
 import InstructionBox from './InstructionBox';
+import { HashRouter, Routes, Route } from 'react-router-dom' // ✅ Changed from BrowserRouter to HashRouter
 
 function Home() {
   return (
     <>
-     <InstructionBox />
-      <BrowserRouter>
-    <Routes>
-      <Route path='/' element={<Range/>}/>
-      <Route path='/Game' element={<App/>}/>
-      <Route path='/Finish' element={<Finish/>}/>
-     </Routes>
-    </BrowserRouter>
+      <InstructionBox />
+      <HashRouter>
+        <Routes>
+          <Route path='/' element={<Range />} />
+          <Route path='/Game' element={<App />} />
+          <Route path='/Finish' element={<Finish />} />
+        </Routes>
+      </HashRouter>
     </>
-    
   )
 }
 
