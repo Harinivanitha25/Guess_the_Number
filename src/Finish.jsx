@@ -1,5 +1,5 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom';
+import { useLocation,Link } from 'react-router-dom';
 import './index.css'
 function Finish() {
     const { state } = useLocation();
@@ -14,7 +14,7 @@ function Finish() {
       ) : (
         <p className='finish' >There is no attempts available. <br></br>The correct number is {num}.</p>
       )}
-      <a href="#/" className='try' >Try Again</a>
+      <Link to="/" className="try">Try Again</Link>
     </>
   )
 }

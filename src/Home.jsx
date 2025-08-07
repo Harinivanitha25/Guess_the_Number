@@ -8,8 +8,9 @@ import { HashRouter, Routes, Route } from 'react-router-dom' // ✅ Changed from
 function Home() {
   return (
     <>
-      <InstructionBox />
+     
       <HashRouter>
+         <InstructionBox />
         <Routes>
           <Route path='/' element={<Range />} />
           <Route path='/Game' element={<App />} />
