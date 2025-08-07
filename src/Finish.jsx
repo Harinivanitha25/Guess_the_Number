@@ -14,7 +14,7 @@ function Finish() {
       ) : (
         <p className='finish' >There is no attempts available. <br></br>The correct number is {num}.</p>
       )}
-      <a href="/" className='try' >Try Again</a>
+      <a href="#/" className='try' >Try Again</a>
     </>
   )
 }
